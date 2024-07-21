@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background: #444;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #f0c330;
+}
+
+header {
+    height: 100vh;
+    background: url('https://unsplash.com/photos/person-standing-in-woods-WF7-W7pn70Q') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+}
+
+.header-content {
+    max-width: 600px;
+}
+
+.header-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.header-content .btn {
+    background: #f0c330;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.header-content .btn:hover {
+    background: #e0b220;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#about, #services, #portfolio, #contact {
+    background: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.services-list, .portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-item, .portfolio-item {
+    flex: 1 1 calc(33.333% - 40px);
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.service-item:hover, .portfolio-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item h3, .portfolio-item h3 {
+    margin-top: 0;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+form .btn {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form .btn:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .services-list, .portfolio-items {
+        flex-direction: column;
+    }
+
+    .service-item, .portfolio-item {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+}
